@@ -13,19 +13,13 @@ cases: {
     data: "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
     error?: _|_,
   }
-
-  createProxy_1_2_0: {
-    $0: {
-      data: "0x0ddb56f661e5bd05fb252f5bc619f74039cd6d63",
-      error?: _|_,
-    }
+  $6: {
+    data: "0x0ddb56f661e5bd05fb252f5bc619f74039cd6d63",
+    error?: _|_,
   }
-
-  createProxy_1_3_0: {
-    $0: {
-      data: "0xb1eccd188bf7c5708c863b77ed115bc176fb7d92",
-      error?: _|_,
-    }
+  $7: {
+    data: "0xb1eccd188bf7c5708c863b77ed115bc176fb7d92",
+    error?: _|_,
   }
 
   proxyCreationCode: {

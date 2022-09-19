@@ -28,29 +28,25 @@ jobs:
         bytecode: $cases.3.data
         connection:
           networkNameOrChainId: "testnet"
+    - uri: fs/build
+      method: createProxy
+      args:
+        address: $cases.4.data
+        safeMasterCopyAddress: $cases.4.data
+        initializer: "0x"
+        saltNonce: 42
+        connection:
+          networkNameOrChainId: "testnet"
+    - uri: fs/build
+      method: createProxy
+      args:
+        address: $cases.5.data
+        safeMasterCopyAddress: $cases.5.data
+        initializer: "0x"
+        saltNonce: 42
+        connection:
+          networkNameOrChainId: "testnet"
     jobs:
-      createProxy_1_2_0:
-        steps:
-        - uri: fs/build
-          method: createProxy
-          args:
-            address: $cases.4.data
-            safeMasterCopyAddress: $cases.4.data
-            initializer: "0x"
-            saltNonce: 42
-            connection:
-              networkNameOrChainId: "testnet"
-      createProxy_1_3_0:
-        steps:
-        - uri: fs/build
-          method: createProxy
-          args:
-            address: $cases.5.data
-            safeMasterCopyAddress: $cases.5.data
-            initializer: "0x"
-            saltNonce: 42
-            connection:
-              networkNameOrChainId: "testnet"
       proxyCreationCode:
         steps:
         - uri: fs/build
