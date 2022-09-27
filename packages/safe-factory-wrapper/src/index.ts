@@ -24,6 +24,7 @@ import {
   SafeContracts_Ethereum_TxOverrides,
   SafeContracts_Module,
 } from "./wrap";
+import {getProxyFactoryDeployment} from '@gnosis.pm/safe-deployments'
 
 export function getChainId(args:Args_getChainId): String {
   return Ethereum_Module.getNetwork({
@@ -34,6 +35,8 @@ export function getChainId(args:Args_getChainId): String {
 export function deploySafe(args: Args_deploySafe): SafePayload | null {
   validateSafeAccountConfig(args.safeAccountConfig);
 
+  const deployment = getProxyFactoryDeployment()
+  
   if (args.safeDeploymentConfig != null) {
     validateSafeDeploymentConfig(args.safeDeploymentConfig!);
   }
