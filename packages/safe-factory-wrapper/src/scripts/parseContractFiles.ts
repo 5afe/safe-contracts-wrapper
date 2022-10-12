@@ -1,7 +1,5 @@
 import fs from "fs";
-/* const filePath =
-  "./node_modules/@gnosis.pm/safe-deployments/dist/assets/v1.0.0/gnosis_safe.json";
- */
+
 const basePath = "./node_modules/@gnosis.pm/safe-deployments/dist/assets";
 const requiredContractFilesNames = [
   "gnosis_safe.json",
@@ -12,6 +10,10 @@ const requiredContractFilesNames = [
 ];
 
 const savePath = "./src/utils/contractAddresses";
+
+run();
+
+console.log("Contract addressess map generation done");
 
 async function run() {
   const versions = getVersions();
@@ -28,7 +30,6 @@ async function run() {
       const file = getFile(filePath);
       const networks = getNetworksFromFile(file);
       if (networks) {
-        //console.log("Networks", version, fileName, networks);
         createNetworksFile(version, fileName, networks);
       }
     }
@@ -84,7 +85,3 @@ function getNetworksFromFile(file: string): [string, string][] | undefined {
 function decorateNetworksFileContent(fileContent: string) {
   return `const map = ${fileContent}; \n\nexport default map;`;
 }
-
-run();
-
-console.log('Contract addressess map generation done')
