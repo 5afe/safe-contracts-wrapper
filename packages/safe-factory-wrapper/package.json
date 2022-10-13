@@ -10,7 +10,7 @@
     "build"
   ],
   "scripts": {
-    "prebuild": "ts-node ./src/scripts/parseContractFiles",
+    "prebuild": "ts-node ./scripts/parseContractFiles",
     "build": "polywrap build",
     "codegen": "polywrap codegen",
     "test": "yarn test:e2e",
