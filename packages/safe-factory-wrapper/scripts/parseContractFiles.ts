@@ -11,6 +11,9 @@ const requiredContractFilesNames = [
 
 const savePath = "./src/utils/contractAddresses";
 
+
+console.log("Contract addressess map generation started");
+
 run();
 
 console.log("Contract addressess map generation done");
