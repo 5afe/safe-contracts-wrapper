@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const basePath = "./node_modules/@gnosis.pm/safe-deployments/dist/assets";
+const basePath = "../../node_modules/@gnosis.pm/safe-deployments/dist/assets";
 const requiredContractFilesNames = [
   "gnosis_safe.json",
   "gnosis_safe_l2.json",
@@ -11,14 +11,10 @@ const requiredContractFilesNames = [
 
 const savePath = "./src/utils/contractAddresses";
 
-
-console.log("Contract addressess map generation started");
-
 run();
 
-console.log("Contract addressess map generation done");
-
 async function run() {
+  console.log("Contract addressess map generation started");
   const versions = getVersions();
 
   for (const version of versions) {
@@ -37,6 +33,8 @@ async function run() {
       }
     }
   }
+
+  console.log("Contract addressess map generation done");
 }
 
 function getVersions() {
