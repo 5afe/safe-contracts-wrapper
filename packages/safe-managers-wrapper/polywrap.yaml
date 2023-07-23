@@ -1,0 +1,13 @@
+format: 0.4.0
+project:
+  name: safe-manager
+  type: wasm/assemblyscript
+source:
+  module: ./src/index.ts
+  schema: ./src/schema.graphql
+  import_abis:
+    - uri: wrap://safe/common
+      abi: ../safe-common-types/schema.graphql
+extensions:
+  build: ./polywrap.build.yaml
+  docs: ./polywrap.docs.yaml
